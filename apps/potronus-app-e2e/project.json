@@ -1,0 +1,28 @@
+{
+  "root": "apps/potronus-app-e2e",
+  "sourceRoot": "apps/potronus-app-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/potronus-app-e2e/cypress.json",
+        "devServerTarget": "potronus-app:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "potronus-app:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/potronus-app-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["potronus-app"]
+}
