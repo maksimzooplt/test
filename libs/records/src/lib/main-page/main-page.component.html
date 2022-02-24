@@ -1,0 +1,3 @@
+<ng-container *ngIf="dataset$ | async as dataset">
+  <potronus-table [columns]="columns" [dataSource]="dataset"></potronus-table>
+</ng-container>

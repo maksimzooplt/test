@@ -1,0 +1,28 @@
+{
+  "projectType": "library",
+  "root": "libs/shared-items",
+  "sourceRoot": "libs/shared-items/src",
+  "prefix": "potronus",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/shared-items"
+      ],
+      "options": {
+        "jestConfig": "libs/shared-items/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared-items/src/**/*.ts",
+          "libs/shared-items/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

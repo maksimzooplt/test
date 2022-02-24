@@ -1,0 +1,28 @@
+{
+  "projectType": "library",
+  "root": "libs/records",
+  "sourceRoot": "libs/records/src",
+  "prefix": "potronus",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/records"
+      ],
+      "options": {
+        "jestConfig": "libs/records/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/records/src/**/*.ts",
+          "libs/records/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
