@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@potronus/records": ["libs/records/src/index.ts"],
-      "@potronus/shared-items": ["libs/shared-items/src/index.ts"]
+      "@santander/records": ["libs/records/src/index.ts"],
+      "@santander/shared-items": ["libs/shared-items/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

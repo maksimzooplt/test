@@ -3,9 +3,9 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { RecordsHttpService } from './records-http.service';
-import { RecordsEntity } from '@potronus/records';
+import { RecordsEntity } from '@santander/records';
 import { TestBed } from '@angular/core/testing';
-import { environment } from '../../../../../apps/potronus-app/src/environments/environment';
+import { environment } from '../../../../../apps/santander-app/src/environments/environment';
 
 
 describe('RecordsService', () => {
@@ -14,18 +14,12 @@ describe('RecordsService', () => {
 
   const expectedRecords: RecordsEntity[] =
     [{
-      emergency:{
-        emergencyId:"2f7d8518-31be-4d81-ba7a-de2abgc2c498",
-        requestTime: new Date(),
-      },
-      device:{
-        serialNumber:"RFAZ22FWAKZ",
-      },
-      holder:{
-        firstName:"Jonah",
-        lastName:"Johnson"
-      }
-    }];
+      id: 2,
+      instrument: 'EUR/JPY',
+      bid: 119.60,
+      ask: 119.90,
+      timestamp: '01-06-2020 12:01:02:001'
+    },];
 
   beforeEach(() => {
     TestBed.configureTestingModule({

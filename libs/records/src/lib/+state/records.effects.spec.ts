@@ -9,7 +9,7 @@ import { Observable, of } from 'rxjs';
 import * as RecordsActions from './records.actions';
 import { RecordsEffects } from './records.effects';
 import { RecordsHttpService } from '../services/records-http.service';
-import { initialState, RecordsFacade } from '@potronus/records';
+import { initialState, RecordsFacade } from '@santander/records';
 
 describe('RecordsEffects', () => {
   let actions: Observable<Action>;

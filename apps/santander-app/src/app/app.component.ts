@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'potronus-root',
+  selector: 'santander-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

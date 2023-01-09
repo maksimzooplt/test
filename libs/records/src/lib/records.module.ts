@@ -6,7 +6,7 @@ import * as fromRecords from './+state/records.reducer';
 import { RecordsEffects } from './+state/records.effects';
 import { RecordsFacade } from './+state/records.facade';
 import { MainPageComponent } from './main-page/main-page.component';
-import { SharedItemsModule } from '@potronus/shared-items';
+import { SharedItemsModule } from '@santander/shared-items';
 import { RecordsHttpService } from './services/records-http.service';
 import { RecordsRoutingModule } from './records-routing.module';
 

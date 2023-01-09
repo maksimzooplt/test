@@ -11,7 +11,7 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: () =>
-          import('@potronus/records').then((m) => m.RecordsModule),
+          import('@santander/records').then((m) => m.RecordsModule),
       },
     ],
   },

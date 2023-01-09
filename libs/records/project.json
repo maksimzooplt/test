@@ -2,7 +2,7 @@
   "projectType": "library",
   "root": "libs/records",
   "sourceRoot": "libs/records/src",
-  "prefix": "potronus",
+  "prefix": "santander",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",

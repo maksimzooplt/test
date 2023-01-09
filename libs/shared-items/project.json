@@ -2,7 +2,7 @@
   "projectType": "library",
   "root": "libs/shared-items",
   "sourceRoot": "libs/shared-items/src",
-  "prefix": "potronus",
+  "prefix": "santander",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",

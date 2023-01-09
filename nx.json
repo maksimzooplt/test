@@ -1,5 +1,5 @@
 {
-  "npmScope": "potronus",
+  "npmScope": "santander",
   "affected": {
     "defaultBase": "main"
   },
@@ -50,5 +50,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "potronus-app"
+  "defaultProject": "santander-app"
 }

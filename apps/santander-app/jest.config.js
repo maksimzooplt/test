@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'potronus-app',
+  displayName: 'santander-app',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/potronus-app',
+  coverageDirectory: '../../coverage/apps/santander-app',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

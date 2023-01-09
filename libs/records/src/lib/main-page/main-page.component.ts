@@ -1,39 +1,47 @@
-import { Component, OnInit } from '@angular/core';
-import { RecordsEntity, RecordsFacade } from '@potronus/records';
-import { Observable } from 'rxjs';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { RecordsEntity, RecordsFacade } from '@santander/records';
 import { DatePipe } from '@angular/common';
 
 
 @Component({
-  selector: 'potronus-main-page',
+  selector: 'santander-main-page',
   templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.scss']
+  styleUrls: ['./main-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainPageComponent {
   readonly dataset$ = this.recordsFacade.allRecords$
   readonly columns = [
     {
-      columnDef: 'emergency_id',
-      header: 'Emergency Id',
-      cell:(item: RecordsEntity) => `${item.emergency.emergencyId}`
+      columnDef: 'id',
+      header: 'Id',
+      cell:(item: RecordsEntity) => `${item.id}`
     },
     {
-      columnDef: 'request_time',
-      header: 'Request Time',
-      cell:(item: RecordsEntity) => `${this.datePipe.transform(item.emergency.requestTime,'short')}`
+      columnDef: 'timestamp',
+      header: 'Timestamp',
+      cell:(item: RecordsEntity) => `${item.timestamp}`
     },
     {
-      columnDef: 'device',
-      header: 'Device',
-      cell:(item: RecordsEntity) => `${item.device.serialNumber}`
+      columnDef: 'bid',
+      header: 'Bid',
+      cell:(item: RecordsEntity) => `${item.bid}`
     },
     {
-      columnDef: 'username',
-      header: 'User',
-      cell:(item: RecordsEntity) => `${item.holder.firstName} ${item.holder.lastName}`
+      columnDef: 'ask',
+      header: 'Ask',
+      cell:(item: RecordsEntity) => `${item.ask}`
+    },
+    {
+      columnDef: 'instrument',
+      header: 'Instrument',
+      cell:(item: RecordsEntity) => `${item.instrument}`
     },
   ]
   constructor(private recordsFacade: RecordsFacade, private datePipe: DatePipe) {
     this.recordsFacade.init()
+    setInterval(() => {
+      this.recordsFacade.init()
+    },1000)
   }
 }

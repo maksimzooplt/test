@@ -18,7 +18,7 @@ export interface RecordsPartialState {
 
 export const recordsAdapter: EntityAdapter<RecordsEntity> =
   createEntityAdapter<RecordsEntity>({
-    selectId: (item: RecordsEntity) => item.emergency.emergencyId,
+    selectId: (item: RecordsEntity) => item.id,
   });
 
 export const initialState: State = recordsAdapter.getInitialState({

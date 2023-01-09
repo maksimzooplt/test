@@ -8,19 +8,13 @@ import * as RecordsSelectors from './records.selectors';
 
 describe('Records Selectors', () => {
   const ERROR_MSG = 'No Error Available';
-  const getRecordsId = (it: RecordsEntity) => it.emergency.emergencyId;
+  const getRecordsId = (it: RecordsEntity) => it.id;
   const createRecordsEntity = (id: string): RecordsEntity => ({
-    emergency: {
-      emergencyId: id,
-      requestTime: new Date()
-    },
-    device:{
-      serialNumber:'defede',
-    },
-    holder: {
-      lastName:'Maks',
-      firstName:'Bratukhin'
-    }
+    id: 2,
+    instrument: 'EUR/JPY',
+    bid: 119.60,
+    ask: 119.90,
+    timestamp: '01-06-2020 12:01:02:001'
   });
 
   let state: RecordsPartialState;

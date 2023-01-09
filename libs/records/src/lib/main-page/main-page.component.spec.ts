@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MainPageComponent } from './main-page.component';
-import { RecordsFacade } from '@potronus/records';
+import { RecordsFacade } from '@santander/records';
 import { provideMockStore } from '@ngrx/store/testing';
 import { DatePipe } from '@angular/common';
 
